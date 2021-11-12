@@ -1,10 +1,9 @@
-package org.openmrs.contrib.kenyaemr.automation.page;
+package org.openmrs.contrib.kenyaemr.qaframework.automation.page;
 
 public class FindPatientPage extends Page {
 	
 	public FindPatientPage(Page parent) {
 		super(parent);
-		
 	}
 	
 	@Override

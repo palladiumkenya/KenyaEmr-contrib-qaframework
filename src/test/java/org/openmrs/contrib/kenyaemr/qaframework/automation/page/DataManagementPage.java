@@ -1,4 +1,4 @@
-package org.openmrs.contrib.kenyaemr.automation.page;
+package org.openmrs.contrib.kenyaemr.qaframework.automation.page;
 
 public class DataManagementPage extends Page {
 	

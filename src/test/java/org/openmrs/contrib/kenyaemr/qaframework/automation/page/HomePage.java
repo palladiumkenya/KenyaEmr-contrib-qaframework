@@ -1,4 +1,4 @@
-package org.openmrs.contrib.kenyaemr.automation.page;
+package org.openmrs.contrib.kenyaemr.qaframework.automation.page;
 
 import org.openqa.selenium.By;
 
@@ -21,20 +21,15 @@ public class HomePage extends Page {
 	
 	private final String PATH_HOME = "/referenceapplication/home.page";
 	
-	private static final By FIND_PATIENT_RECORD = By
-	        .id("coreapps-activeVisitsHomepageLink-coreapps-activeVisitsHomepageLink-extension");
+	private static final By FIND_PATIENT_RECORD = By.id("coreapps-activeVisitsHomepageLink-coreapps-activeVisitsHomepageLink-extension");
 	
-	private static final By DATA_MANAGEMENT = By
-	        .cssSelector("#coreapps-datamanagement-homepageLink-coreapps-datamanagement-homepageLink-extension");
+	private static final By DATA_MANAGEMENT = By.cssSelector("#coreapps-datamanagement-homepageLink-coreapps-datamanagement-homepageLink-extension");
 	
-	private final By APP_REGISTER_PATIENT = By.id(
-	    "referenceapplication-registrationapp-registerPatient-homepageLink-referenceapplication-registrationapp-registerPatient-homepageLink-extension");
+	private final By APP_REGISTER_PATIENT = By.id("referenceapplication-registrationapp-registerPatient-homepageLink-referenceapplication-registrationapp-registerPatient-homepageLink-extension");
 	
-	private final By APP_SYSTEM_ADMIN = By
-	        .id("coreapps-systemadministration-homepageLink-coreapps-systemadministration-homepageLink-extension");
+	private final By APP_SYSTEM_ADMIN = By.id("coreapps-systemadministration-homepageLink-coreapps-systemadministration-homepageLink-extension");
 	
-	private final By REPORTS_MANAGEMENT = By
-	        .cssSelector("#reportingui-reports-homepagelink-reportingui-reports-homepagelink-extension");
+	private final By REPORTS_MANAGEMENT = By.cssSelector("#reportingui-reports-homepagelink-reportingui-reports-homepagelink-extension");
 	
 	public HomePage(Page page) {
 		super(page);

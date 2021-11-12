@@ -2,10 +2,10 @@ package org.openmrs.contrib.kenyaemr.qaframework.automation;
 
 import static org.junit.Assert.assertTrue;
 
-import org.openmrs.contrib.kenyaemr.automation.page.HomePage;
-import org.openmrs.contrib.kenyaemr.automation.page.LoginPage;
 import org.openmrs.contrib.kenyaemr.qaframework.RunTest;
 import org.openmrs.contrib.kenyaemr.qaframework.automation.helper.TestBase;
+import org.openmrs.contrib.kenyaemr.qaframework.automation.page.HomePage;
+import org.openmrs.contrib.kenyaemr.qaframework.automation.page.LoginPage;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
