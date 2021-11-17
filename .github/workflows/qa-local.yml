@@ -1,6 +1,10 @@
 name: KENYA EMR QA
 on:
-  workflow_dispatch:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  repository_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest         
