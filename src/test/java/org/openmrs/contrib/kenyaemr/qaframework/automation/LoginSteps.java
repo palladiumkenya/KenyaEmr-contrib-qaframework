@@ -2,10 +2,10 @@ package org.openmrs.contrib.kenyaemr.qaframework.automation;
 
 import static org.junit.Assert.assertTrue;
 
-import org.openmrs.contrib.kenyaemr.qaframework.RunTest;
-import org.openmrs.contrib.kenyaemr.qaframework.automation.helper.TestBase;
 import org.openmrs.contrib.kenyaemr.qaframework.automation.page.HomePage;
 import org.openmrs.contrib.kenyaemr.qaframework.automation.page.LoginPage;
+import org.openmrs.contrib.kenyaemr.qaframework.automation.test.TestBase;
+import org.openmrs.contrib.kenyamer.qaframework.RunTest;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -37,22 +37,22 @@ public class LoginSteps extends TestBase {
 	}
 	
 	@When("User enters {string} username")
-	public void enterUsername(String username) {
+	public void anyUsername(String username) {
 		loginPage.enterUsername(username);
 	}
 	
 	@And("User enters {string} password")
-	public void enterPassword(String password) {
+	public void anyPassword(String password) {
 		loginPage.enterPassword(password);
 	}
 	
-	@And("User click on login button")
-	public void userClickOnLogButton() {
+	@And("User Logs in")
+	public void userLogsIn() {
 		loginPage.clickLoginButton();
 	}
 	
 	@Then("System Evaluates Login {string}")
-	public void evaluateLoginPage(String status) {
+	public void evaluateLogin(String status) {
 		homePage = new HomePage(loginPage);
 		if (status.trim().endsWith("true")) {
 			assertTrue(homePage.hasLogOutLink());
@@ -61,8 +61,4 @@ public class LoginSteps extends TestBase {
 		}
 	}
 	
-	@And("The system go to homePage")
-	public void login() {
-		homePage = loginPage.goToHomePage();
-	}
 }

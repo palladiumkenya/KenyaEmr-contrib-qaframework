@@ -1,4 +1,4 @@
-package org.openmrs.contrib.kenyaemr.qaframework.automation.helper;
+package org.openmrs.contrib.kenyaemr.qaframework.automation.test;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;

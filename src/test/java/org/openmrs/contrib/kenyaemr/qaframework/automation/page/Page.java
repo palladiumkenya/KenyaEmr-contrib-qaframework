@@ -3,15 +3,17 @@ package org.openmrs.contrib.kenyaemr.qaframework.automation.page;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
-
 import org.apache.commons.lang3.StringUtils;
+
+import com.google.common.collect.Iterables;
+
 import org.junit.Assert;
-import org.openmrs.contrib.kenyaemr.qaframework.automation.helper.TestBase;
-import org.openmrs.contrib.kenyaemr.qaframework.automation.helper.TestProperties;
 import org.openmrs.contrib.kenyaemr.qaframework.automation.page.exception.PageRejectedException;
+import org.openmrs.contrib.kenyaemr.qaframework.automation.test.TestBase;
+import org.openmrs.contrib.kenyaemr.qaframework.automation.test.TestProperties;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -23,8 +25,6 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import com.google.common.collect.Iterables;
 
 /**
  * A superclass for "real" pages. Has lots of handy methods for accessing elements, clicking,

@@ -19,20 +19,21 @@ public class HomePage extends Page {
 	
 	private static final By SAVE_BUTTON = By.id("save-button");
 	
-	private final String PATH_HOME = "/referenceapplication/home.page";
+	private final By HOME_PAGE = By.cssSelector("body > div.ke-toolbar > div.ke-apptoolbar > div > a");
 	
-	private static final By FIND_PATIENT_RECORD = By.id("coreapps-activeVisitsHomepageLink-coreapps-activeVisitsHomepageLink-extension");
-	
-	private static final By DATA_MANAGEMENT = By.cssSelector("#coreapps-datamanagement-homepageLink-coreapps-datamanagement-homepageLink-extension");
-	
-	private final By APP_REGISTER_PATIENT = By.id("referenceapplication-registrationapp-registerPatient-homepageLink-referenceapplication-registrationapp-registerPatient-homepageLink-extension");
-	
-	private final By APP_SYSTEM_ADMIN = By.id("coreapps-systemadministration-homepageLink-coreapps-systemadministration-homepageLink-extension");
-	
-	private final By REPORTS_MANAGEMENT = By.cssSelector("#reportingui-reports-homepagelink-reportingui-reports-homepagelink-extension");
+	private final String PATH_HOME = "/openmrs/index.htm";
 	
 	public HomePage(Page page) {
 		super(page);
+	}
+	
+	public HomePage clickOnHomeIcon() {
+		clickOn(HOME_PAGE);
+		return HomePage(this);
+	}
+	
+	private HomePage HomePage(HomePage homePage) {
+		return null;
 	}
 	
 	@Override
@@ -52,21 +53,6 @@ public class HomePage extends Page {
 		goToPage("appui/header/logout.action?successUrl=openmrs");
 	}
 	
-	public RegisterPatientPage clickRegisterPatientApp() {
-		clickOn(APP_REGISTER_PATIENT);
-		return new RegisterPatientPage(this);
-	}
-	
-	public FindPatientPage clickOnSearchPatientRecord() {
-		clickOn(FIND_PATIENT_RECORD);
-		return new FindPatientPage(this);
-	}
-	
-	public SystemAdministrationPage clickSystemAdministrationApp() {
-		clickOn(APP_SYSTEM_ADMIN);
-		return new SystemAdministrationPage(this);
-	}
-	
 	public void enterOldPassword(String oldPassword) {
 		setText(FIELD_OLD_PASSWORD, oldPassword);
 	}
@@ -77,17 +63,6 @@ public class HomePage extends Page {
 	
 	public void confirmNewPassword(String confirmPassword) {
 		setText(FIELD_CONFIRM_PASSWORD, confirmPassword);
-	}
-	
-	public ReportsPage clickOnReportsApp() {
-		clickOn(REPORTS_MANAGEMENT);
-		return new ReportsPage(this);
-		
-	}
-	
-	public DataManagementPage clickOnDataManagementPage() {
-		clickOn(DATA_MANAGEMENT);
-		return new DataManagementPage(this);
 	}
 	
 	public String savePassword() {

@@ -7,9 +7,9 @@ Feature: User Login
   Scenario Outline: Failing or Succeeding to Login
     When User enters "<username>" username
     And User enters "<password>" password
-    And User click on login button
+    And User Logs in
     Then System Evaluates Login "<status>"
-    And  The system go to homePage
     Examples:
       | username  | password  | status |
-      | admin     | Admin123  |true   |
+      | admin     | Admin123  | true   |
+

@@ -10,15 +10,13 @@ public class LoginPage extends Page {
 	
 	private final String LOGIN_PATH = "/login.htm";
 	
-	private final String MODULES_NOT_RUNNING_MESSAGE = "If you are seeing this page, it means that the OpenMRS Platform is running";
-	
 	private final String LOGOUT_PATH = "/logout";
 	
-	private final By FIELD_USERNAME = By.id("uname");
+	private final By FIELD_USERNAME = By.cssSelector("#uname");
 	
 	private final By FIELD_PASSWORD = By.cssSelector("input[type=password]");
 	
-	private final By BUTTON_LOGIN = By.cssSelector("input[type=button]");
+	private final By BUTTON_LOGIN = By.xpath("//tbody/tr[3]/td[2]/button[1]");
 	
 	private String username;
 	
@@ -76,4 +74,5 @@ public class LoginPage extends Page {
 	public Boolean hasLoginButton() {
 		return hasElement(BUTTON_LOGIN);
 	}
+	
 }
