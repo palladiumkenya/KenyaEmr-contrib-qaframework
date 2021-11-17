@@ -22,7 +22,7 @@ public class TestProperties {
 	
 	public static final String WEBAPP_URL_PROPERTY = "webapp.url";
 	
-	public static final String DEFAULT_WEBAPP_URL = "https://prod.kenyahmis.org:8400/openmrs";
+	public static final String DEFAULT_WEBAPP_URL = "https://data.kenyahmis.org:9100/openmrs";
 	
 	public static final String HEADLESS_PROPERTY = "headless";
 	
