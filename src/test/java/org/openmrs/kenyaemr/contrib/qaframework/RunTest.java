@@ -1,4 +1,4 @@
-package org.openmrs.contrib.kenyamer.qaframework;
+package org.openmrs.kenyaemr.contrib.qaframework;
 
 import org.junit.runner.RunWith;
 
@@ -8,9 +8,9 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         // defining ordered by name features folder
-        features = { "src/features" },
+        features = { "src/test/resources/features" },
         // defining the definition steps package
-        glue = "org.openmrs.contrib.kenyaemr.qaframework.automation", plugin = { "html:target/index.html",
+        glue = "org.openmrs.palladiumkenya.contrib.qaframework.automation", plugin = { "html:target/index.html",
             "message:target/cucumber.ndjson" }, monochrome = true)
 public class RunTest {
 	

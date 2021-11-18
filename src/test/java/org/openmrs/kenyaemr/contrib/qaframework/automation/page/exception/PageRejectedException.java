@@ -1,4 +1,4 @@
-package org.openmrs.contrib.kenyaemr.qaframework.automation.page.exception;
+package org.openmrs.kenyaemr.contrib.qaframework.automation.page.exception;
 
 public class PageRejectedException extends RuntimeException {
 	

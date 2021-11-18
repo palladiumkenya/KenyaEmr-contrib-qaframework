@@ -1,4 +1,4 @@
-package org.openmrs.contrib.kenyaemr.qaframework.automation.page;
+package org.openmrs.kenyaemr.contrib.qaframework.automation.page;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -11,9 +11,9 @@ import org.apache.commons.lang3.StringUtils;
 import com.google.common.collect.Iterables;
 
 import org.junit.Assert;
-import org.openmrs.contrib.kenyaemr.qaframework.automation.page.exception.PageRejectedException;
-import org.openmrs.contrib.kenyaemr.qaframework.automation.test.TestBase;
-import org.openmrs.contrib.kenyaemr.qaframework.automation.test.TestProperties;
+import org.openmrs.kenyaemr.contrib.qaframework.automation.page.exception.PageRejectedException;
+import org.openmrs.kenyaemr.contrib.qaframework.automation.test.TestBase;
+import org.openmrs.kenyaemr.contrib.qaframework.automation.test.TestProperties;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;

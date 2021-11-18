@@ -1,4 +1,4 @@
-package org.openmrs.contrib.kenyaemr.qaframework.automation.page;
+package org.openmrs.kenyaemr.contrib.qaframework.automation.page;
 
 import org.openqa.selenium.By;
 

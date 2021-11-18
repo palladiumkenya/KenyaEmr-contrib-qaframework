@@ -1,4 +1,4 @@
-package org.openmrs.contrib.kenyaemr.qaframework.automation.test;
+package org.openmrs.kenyaemr.contrib.qaframework.automation.test;
 
 import java.io.IOException;
 import java.io.InputStream;

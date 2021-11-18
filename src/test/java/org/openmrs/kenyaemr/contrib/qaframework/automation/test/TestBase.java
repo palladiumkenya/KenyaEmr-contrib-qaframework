@@ -1,4 +1,4 @@
-package org.openmrs.contrib.kenyaemr.qaframework.automation.test;
+package org.openmrs.kenyaemr.contrib.qaframework.automation.test;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
@@ -20,7 +20,7 @@ import org.apache.commons.vfs2.VFS;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
-import org.openmrs.contrib.kenyaemr.qaframework.automation.page.Page;
+import org.openmrs.kenyaemr.contrib.qaframework.automation.page.Page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
