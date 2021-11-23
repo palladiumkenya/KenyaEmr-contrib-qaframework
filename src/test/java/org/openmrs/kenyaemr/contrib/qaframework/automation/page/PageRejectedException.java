@@ -1,4 +1,4 @@
-package org.openmrs.kenyaemr.contrib.qaframework.automation.page.exception;
+package org.openmrs.kenyaemr.contrib.qaframework.automation.page;
 
 public class PageRejectedException extends RuntimeException {
 	
@@ -16,6 +16,5 @@ public class PageRejectedException extends RuntimeException {
 	
 	public PageRejectedException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
 		super(message, cause, enableSuppression, writableStackTrace);
-	}
-	
+	}	
 }

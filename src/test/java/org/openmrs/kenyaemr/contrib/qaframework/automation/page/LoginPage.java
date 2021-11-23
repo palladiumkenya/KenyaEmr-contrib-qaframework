@@ -73,6 +73,5 @@ public class LoginPage extends Page {
 	
 	public Boolean hasLoginButton() {
 		return hasElement(BUTTON_LOGIN);
-	}
-	
+	}	
 }
