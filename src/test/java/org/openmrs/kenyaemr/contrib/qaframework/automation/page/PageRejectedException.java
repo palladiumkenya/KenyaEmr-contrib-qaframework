@@ -2,6 +2,11 @@ package org.openmrs.kenyaemr.contrib.qaframework.automation.page;
 
 public class PageRejectedException extends RuntimeException {
 	
+	/**
+	 * Default serial version ID
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public PageRejectedException(String pageRejectUrl) {
 		super(pageRejectUrl);
 	}
