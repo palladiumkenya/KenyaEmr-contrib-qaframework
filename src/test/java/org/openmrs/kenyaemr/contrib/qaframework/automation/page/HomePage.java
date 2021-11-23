@@ -29,13 +29,9 @@ public class HomePage extends Page {
 	
 	public HomePage clickOnHomeIcon() {
 		clickOn(HOME_PAGE);
-		return HomePage(this);
+		return new HomePage(this);
 	}
-	
-	private HomePage HomePage(HomePage homePage) {
-		return null;
-	}
-	
+
 	@Override
 	public String getPageUrl() {
 		return PATH_HOME;
@@ -68,6 +64,5 @@ public class HomePage extends Page {
 	public String savePassword() {
 		clickOn(SAVE_BUTTON);
 		return "index.html";
-	}
-	
+	}	
 }

@@ -2,17 +2,17 @@ package org.openmrs.kenyaemr.contrib.qaframework.automation;
 
 import static org.junit.Assert.assertTrue;
 
-import org.openmrs.kenyaemr.contrib.qaframework.RunTest;
-import org.openmrs.kenyaemr.contrib.qaframework.automation.page.HomePage;
-import org.openmrs.kenyaemr.contrib.qaframework.automation.page.LoginPage;
-import org.openmrs.kenyaemr.contrib.qaframework.automation.test.TestBase;
-
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+
+import org.openmrs.kenyaemr.contrib.qaframework.RunTest;
+import org.openmrs.kenyaemr.contrib.qaframework.automation.page.HomePage;
+import org.openmrs.kenyaemr.contrib.qaframework.automation.page.LoginPage;
+import org.openmrs.kenyaemr.contrib.qaframework.automation.test.TestBase;
 
 public class LoginSteps extends TestBase {
 	
@@ -55,10 +55,9 @@ public class LoginSteps extends TestBase {
 	public void evaluateLogin(String status) {
 		homePage = new HomePage(loginPage);
 		if (status.trim().endsWith("true")) {
-			assertTrue(homePage.hasLogOutLink());
+			assertTrue(textExists("Log Out"));
 		} else if (status.trim().endsWith("false")) {
-			assertTrue(loginPage.hasLoginButton());
+			assertTrue(textExists("Home"));
 		}
-	}
-	
+	}	
 }

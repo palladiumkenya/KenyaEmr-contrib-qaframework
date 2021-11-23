@@ -10,15 +10,15 @@ public class TestProperties {
 	
 	public static final String WEBDRIVER_PROPERTY = "webdriver";
 	
-	public static final String DEFAULT_WEBDRIVER = "firefox";
+	public static final String DEFAULT_WEBDRIVER = "chrome";
 	
 	public static final String LOGIN_PASSWORD_PROPERTY = "login.password";
 	
-	public static final String DEFAULT_PASSWORD = "admin";
+	public static final String DEFAULT_PASSWORD = "Admin123";
 	
 	public static final String LOGIN_USERNAME_PROPERTY = "login.username";
 	
-	public static final String DEFAULT_LOGIN_USERNAME = "Admin123";
+	public static final String DEFAULT_LOGIN_USERNAME = "admin";
 	
 	public static final String WEBAPP_URL_PROPERTY = "webapp.url";
 	
@@ -78,7 +78,7 @@ public class TestProperties {
 			return WebDriverType.valueOf(getBrowser());
 		}
 		catch (IllegalArgumentException e) {
-			return WebDriverType.firefox;
+			return WebDriverType.chrome;
 		}
 	}
 	
@@ -97,7 +97,7 @@ public class TestProperties {
 	}
 	
 	public String getFirefoxDriverLocation() {
-		return getProperty("webdriver.gecko.driver", null);
+		return getProperty("webdriver.chrome.driver", null);
 	}
 	
 	public enum WebDriverType {
