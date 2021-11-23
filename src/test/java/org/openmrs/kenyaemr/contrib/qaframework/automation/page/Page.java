@@ -361,6 +361,7 @@ public abstract class Page {
 		alert.dismiss();
 	}
 	
+	@SuppressWarnings("all")
 	public Boolean alertPresent() throws InterruptedException {
 		Thread.sleep(1000);
 		Boolean booelan = false;
@@ -372,6 +373,7 @@ public abstract class Page {
 		return booelan;
 	}
 	
+	@SuppressWarnings("all")
 	public Boolean promptPresent() throws InterruptedException {
 		Thread.sleep(1000);
 		Boolean booelan = false;
@@ -392,6 +394,7 @@ public abstract class Page {
 	}
 	
 	public void waitForElementWithSpecifiedMaxTimeout(By by, long secs) {
+		@SuppressWarnings("all")
 		WebDriverWait waiter = new WebDriverWait(driver, secs);
 		waiter.until(pageReady);
 		waiter.until(ExpectedConditions.visibilityOfElementLocated(by));
