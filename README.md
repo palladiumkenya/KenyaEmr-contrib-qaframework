@@ -2,7 +2,7 @@
 ## Kenya Emr  Automated Testing Framework.
 This is the Kenya EMR  Automated Testing Framework that integrates both BDD with Cucumber and Functional Testing with Selenium using the Page Object Model design for high Maintainability, Readability and Re-usability.
 
-[![Kenya EMR  QA](https://github.com/palladiumkenya/kenyaemr-contrib-qaframework/actions/workflows/qa.yml/badge.svg)](https://github.com/palladiumkenya/kenyaemr-contrib-qaframework/actions/workflows/qa.yml)](https://github.com/palladiumkenya/kenyaemr-contrib-qaframework/blob/master/.github/workflows/qa.yml)
+[![Kenya EMR  QA](https://github.com/palladiumkenya/kenyaemr-contrib-qaframework/actions/workflows/qa.yml/badge.svg)](https://github.com/palladiumkenya/kenyaemr-contrib-qaframework/actions/workflows/qa.yml)
 
 ## Installing dependencies 
 
