@@ -1,4 +1,4 @@
-name: KENYA EMR QA
+name: KENYA EMR QA AUTOMATED TEST
 on:
   push:
     branches: [master]
