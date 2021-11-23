@@ -1,17 +1,16 @@
 package org.openmrs.kenyaemr.contrib.qaframework.automation.page;
 
+import com.google.common.collect.Iterables;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
+
 import org.apache.commons.lang3.StringUtils;
-
-import com.google.common.collect.Iterables;
-
 import org.junit.Assert;
-import org.openmrs.kenyaemr.contrib.qaframework.automation.page.exception.PageRejectedException;
 import org.openmrs.kenyaemr.contrib.qaframework.automation.test.TestBase;
 import org.openmrs.kenyaemr.contrib.qaframework.automation.test.TestProperties;
 import org.openqa.selenium.Alert;
@@ -173,8 +172,7 @@ public abstract class Page {
 		}
 		catch (Exception e) {
 			return null;
-		}
-		
+		}	
 	}
 	
 	public List<WebElement> getElementsIfExisting(By by) {

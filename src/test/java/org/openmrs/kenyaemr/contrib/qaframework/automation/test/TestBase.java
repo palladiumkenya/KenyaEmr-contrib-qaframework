@@ -20,6 +20,7 @@ import org.apache.commons.vfs2.VFS;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
+import org.openmrs.kenyaemr.contrib.qaframework.automation.page.LoginPage;
 import org.openmrs.kenyaemr.contrib.qaframework.automation.page.Page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -55,9 +56,12 @@ public class TestBase {
 	
 	protected Page page;
 	
+	protected LoginPage loginPage;
+	
 	public TestBase() {
 		try {
 			startWebDriver();
+			loginPage = getLoginPage();
 		}
 		catch (Exception e) {
 			fail(e.getMessage());
@@ -86,13 +90,10 @@ public class TestBase {
 			default:
 				// shrug, choose chrome as default
 				driver = setupChromeDriver();
-				break;
-			
-		}
-		
+				break;			
+		}	
 		driver.manage().timeouts().implicitlyWait(MAX_WAIT_IN_SECONDS, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(MAX_PAGE_LOAD_IN_SECONDS, TimeUnit.SECONDS);
-		
+		driver.manage().timeouts().pageLoadTimeout(MAX_PAGE_LOAD_IN_SECONDS, TimeUnit.SECONDS);	
 	}
 	
 	@After
@@ -190,6 +191,14 @@ public class TestBase {
 	 */
 	public void assertPage(Page expected) {
 		assertTrue(driver.getCurrentUrl().contains(expected.getPageUrl()));
+	}
+	
+	protected LoginPage getLoginPage() {
+		return new LoginPage(driver);
+	}
+	
+	protected boolean textExists(String text) {
+		return driver.findElements(By.xpath("//*[contains(text(),'" + text + "')]")).size() > 0;
 	}
 	
 	protected void quit() {
