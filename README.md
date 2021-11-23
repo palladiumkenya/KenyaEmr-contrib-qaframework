@@ -11,7 +11,7 @@ This is the Kenya EMR  Automated Testing Framework that integrates both BDD with
 ## Configuration
 - Set Your test configurations in [src/test/resources/test.properties](./src/test/resources/test.properties)
 
-- See Feature files under [![Feature files](https://github.com/palladiumkenya/KenyaEmr-contrib-qaframework/tree/master/src/features/isanteplus)](https://github.com/palladiumkenya/KenyaEmr-contrib-qaframework/tree/master/src/features/isanteplus)
+- See Feature files under [src/features/automation](./src/features/automation)
 
 ### Running tests
 
