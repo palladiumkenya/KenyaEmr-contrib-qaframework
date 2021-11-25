@@ -90,6 +90,18 @@
                         </goals>
                     </execution>
                     <execution>
+                        <id>make-windows-chromedriver-executable</id>
+                        <phase>process-test-classes</phase>
+                        <configuration>
+                            <target>
+                                <chmod file="target/test-classes/chromedriver/windows/chromedriver.exe" perm="755"/>
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                    <execution>
                         <id>make-mac-firefoxdriver-executable</id>
                         <phase>process-test-classes</phase>
                         <configuration>
