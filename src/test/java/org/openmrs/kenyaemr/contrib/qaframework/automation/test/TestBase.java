@@ -1,3 +1,12 @@
+/**
+ * This Source Code Form is subject to the terms of the Mozilla Public License,
+ * v. 2.0. If a copy of the MPL was not distributed with this file, You can
+ * obtain one at http://mozilla.org/MPL/2.0/. OpenMRS is also distributed under
+ * the terms of the Healthcare Disclaimer located at http://openmrs.org/license.
+ *
+ * Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS
+ * graphic logo is a trademark of OpenMRS Inc.
+ */
 package org.openmrs.kenyaemr.contrib.qaframework.automation.test;
 
 import static org.junit.Assert.assertTrue;
@@ -90,10 +99,10 @@ public class TestBase {
 			default:
 				// shrug, choose chrome as default
 				driver = setupChromeDriver();
-				break;			
-		}	
+				break;
+		}
 		driver.manage().timeouts().implicitlyWait(MAX_WAIT_IN_SECONDS, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(MAX_PAGE_LOAD_IN_SECONDS, TimeUnit.SECONDS);	
+		driver.manage().timeouts().pageLoadTimeout(MAX_PAGE_LOAD_IN_SECONDS, TimeUnit.SECONDS);
 	}
 	
 	@After
@@ -142,9 +151,7 @@ public class TestBase {
 			Assert.fail(errmsg);
 		} else {
 			chromedriverExecutablePath = chromedriverExecutable.getPath();
-			// This checks to see if the chromedriver file is inside a
-			// jar, and if so
-			// uses VFS to extract it to a temp directory.
+			// This checks to see if the chromedriver file is inside a  jar, and if so  uses VFS to extract it to a temp directory.
 			if (chromedriverExecutablePath.contains(".jar!")) {
 				FileObject chromedriver_vfs;
 				try {
