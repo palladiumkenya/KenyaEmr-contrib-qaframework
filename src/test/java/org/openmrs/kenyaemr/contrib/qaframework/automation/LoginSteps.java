@@ -19,9 +19,9 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 import org.openmrs.kenyaemr.contrib.qaframework.RunTest;
+import org.openmrs.kenyaemr.contrib.qaframework.automation.helper.TestBase;
 import org.openmrs.kenyaemr.contrib.qaframework.automation.page.HomePage;
 import org.openmrs.kenyaemr.contrib.qaframework.automation.page.LoginPage;
-import org.openmrs.kenyaemr.contrib.qaframework.automation.test.TestBase;
 
 public class LoginSteps extends TestBase {
 	

@@ -20,8 +20,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Assert;
-import org.openmrs.kenyaemr.contrib.qaframework.automation.test.TestBase;
-import org.openmrs.kenyaemr.contrib.qaframework.automation.test.TestProperties;
+import org.openmrs.kenyaemr.contrib.qaframework.automation.helper.TestBase;
+import org.openmrs.kenyaemr.contrib.qaframework.automation.helper.TestProperties;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;

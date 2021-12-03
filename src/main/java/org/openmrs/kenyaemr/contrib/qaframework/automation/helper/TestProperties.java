@@ -7,7 +7,7 @@
  * Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS
  * graphic logo is a trademark of OpenMRS Inc.
  */
-package org.openmrs.kenyaemr.contrib.qaframework.automation.test;
+package org.openmrs.kenyaemr.contrib.qaframework.automation.helper;
 
 import java.io.IOException;
 import java.io.InputStream;
