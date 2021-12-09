@@ -35,3 +35,4 @@ This is the Kenya EMR  Automated Testing Framework that integrates both BDD with
 | Test Feature        |Filter Tag      |
 |:------------------: |:-------------: |
 | Login               | @login         | 
+| password            | @password      |

@@ -20,6 +20,8 @@ public class LoginPage extends Page {
 	private final String LOGIN_PATH = "/login.htm";
 	
 	private final String LOGOUT_PATH = "/logout";
+
+	private final  By FORGOT_PASSWORD = By.cssSelector("body > div.ke-page-container > div:nth-child(5) > form > table > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(4) > td:nth-child(2) > a");
 	
 	private final By FIELD_USERNAME = By.cssSelector("#uname");
 	
@@ -82,5 +84,10 @@ public class LoginPage extends Page {
 	
 	public Boolean hasLoginButton() {
 		return hasElement(BUTTON_LOGIN);
+	}	
+
+	public ForgotPasswordPage clickOnForgotPasswordLink(){
+		clickOn(FORGOT_PASSWORD);
+		return new ForgotPasswordPage(this);
 	}
 }
