@@ -10,6 +10,7 @@
 package org.openmrs.kenyaemr.contrib.qaframework.automation.page;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.By.ByCssSelector;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -28,6 +29,8 @@ public class LoginPage extends Page {
 	private final By FIELD_PASSWORD = By.cssSelector("input[type=password]");
 	
 	private final By BUTTON_LOGIN = By.xpath("//tbody/tr[3]/td[2]/button[1]");
+	
+	private final By HOME_ICON = By.cssSelector(".ke-apptoolbar > div:nth-child(1) > a:nth-child(1)");
 	
 	private String username;
 	
@@ -89,5 +92,11 @@ public class LoginPage extends Page {
 	public ForgotPasswordPage clickOnForgotPasswordLink(){
 		clickOn(FORGOT_PASSWORD);
 		return new ForgotPasswordPage(this);
+	}
+	
+	
+	public void clickOnHomeIcon() throws Exception {
+		clickOn(HOME_ICON);
+		Thread.sleep(5000);
 	}
 }

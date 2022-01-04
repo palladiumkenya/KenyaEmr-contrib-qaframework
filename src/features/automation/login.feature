@@ -9,6 +9,7 @@ Feature: User Login
     And User enters "<password>" password
     And User Logs in
     Then System Evaluates Login "<status>"
+    Then User goes to HomePage
     Examples:
       | username  | password  | status |
       | admin     | Admin123  | true   |
