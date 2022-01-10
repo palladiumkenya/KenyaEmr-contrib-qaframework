@@ -29,5 +29,7 @@ public class RunTest {
 
                 public static final String PASSWORD = "@password";
 
+                public static final String FORM = "@form";
+
         }
 }

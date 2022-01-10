@@ -27,8 +27,6 @@ public class LoginSteps extends TestBase {
 	
 	private LoginPage loginPage;
 	
-	private HomePage homePage;
-	
 	@After(RunTest.HOOK.LOGIN)
 	public void destroy() {
 		quit();
@@ -62,7 +60,7 @@ public class LoginSteps extends TestBase {
 	
 	@Then("System Evaluates Login {string}")
 	public void evaluateLogin(String status) {
-		homePage = new HomePage(loginPage);
+		new HomePage(loginPage);
 		if (status.trim().endsWith("true")) {
 			assertTrue(textExists("Log Out"));
 		} else if (status.trim().endsWith("false")) {
@@ -71,7 +69,8 @@ public class LoginSteps extends TestBase {
 	}
 	
 	@Then("User goes to HomePage")
-	public void goToHomePage ( ) throws Exception {
-		loginPage.clickOnHomeIcon();
+	public void goToFacilityDashboardPage () throws Exception {
+		loginPage.goToFacilityDashboardPage();
 	}
+
 }
