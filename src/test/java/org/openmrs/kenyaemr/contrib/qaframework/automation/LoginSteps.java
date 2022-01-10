@@ -68,5 +68,10 @@ public class LoginSteps extends TestBase {
 		} else if (status.trim().endsWith("false")) {
 			assertTrue(textExists("Home"));
 		}
-	}	
+	}
+	
+	@Then("User goes to HomePage")
+	public void goToHomePage ( ) throws Exception {
+		loginPage.clickOnHomeIcon();
+	}
 }
