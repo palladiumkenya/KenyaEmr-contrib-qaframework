@@ -16,4 +16,6 @@ Feature: Form management
   And user clicks on Tb screening Form
  # Then enter tb screening diagnosis
   Then user click on enter button
+  And user clicks on completed visit form
+  Then user clicks on delete form button
 

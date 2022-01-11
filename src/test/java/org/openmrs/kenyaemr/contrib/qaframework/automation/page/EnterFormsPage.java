@@ -25,8 +25,9 @@ public class EnterFormsPage  extends Page {
         clickOn(START_ANTI_TBS);
     }
 
-    public void clickOnEnterButton(){
+    public clinicalViewPatientPage clickOnEnterButton(){
         clickOn(ENTER_FORM);
+        return new clinicalViewPatientPage(this);
     }
     
 
