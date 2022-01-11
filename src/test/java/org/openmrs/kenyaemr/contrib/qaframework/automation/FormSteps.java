@@ -98,16 +98,15 @@ public class FormSteps extends TestBase {
       clinicalViewPatientPage =  enterFormsPage.clickOnEnterButton();
     }
 
-    // @And("user clicks on completed visit form")
-    // public void clickOnCompletedVisitForms(){
-    //     clinicalViewPatientPage.clickOnCompletedVisitForms();
-    //     clinicalViewPatientPage.waitForPage();
-    // }
+    @And("user clicks on completed visit form")
+    public void clickOnCompletedVisitForms(){
+        clinicalViewPatientPage.clickOnCompletedVisitForms();
+    }
     
-    // @Then("user clicks on delete form button")
-    // public void clickOnDeleteFormButton(){
-    //     clinicalViewPatientPage.clickOnDeleteButton();
-    // }
+    @Then("user clicks on delete form button")
+    public void clickOnDeleteFormButton(){
+        clinicalViewPatientPage.clickOnDeleteButton();
+    }
 
     
 }
