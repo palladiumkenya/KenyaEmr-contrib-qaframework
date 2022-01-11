@@ -17,8 +17,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
 import org.openmrs.kenyaemr.contrib.qaframework.RunTest;
+//import org.openmrs.kenyaemr.contrib.qaframework.automation.page.FacilityDashboardPage;
 import org.openmrs.kenyaemr.contrib.qaframework.automation.page.HomePage;
 import org.openmrs.kenyaemr.contrib.qaframework.automation.page.LoginPage;
 import org.openmrs.kenyaemr.contrib.qaframework.automation.test.TestBase;
@@ -26,7 +26,8 @@ import org.openmrs.kenyaemr.contrib.qaframework.automation.test.TestBase;
 public class LoginSteps extends TestBase {
 	
 	private LoginPage loginPage;
-	
+	//private FacilityDashboardPage facilityDashboardPage;
+
 	@After(RunTest.HOOK.LOGIN)
 	public void destroy() {
 		quit();
@@ -68,9 +69,11 @@ public class LoginSteps extends TestBase {
 		}
 	}
 	
-	@Then("User goes to HomePage")
-	public void goToFacilityDashboardPage () throws Exception {
-		loginPage.goToFacilityDashboardPage();
-	}
-
+	// @Then("User goes to facility dashboard page")
+	// public void goToFacilityDashboardPage () throws Exception {
+	//     facilityDashboardPage = loginPage.goToFacilityDashboardPage();
+	// 	facilityDashboardPage.waitForPageToLoad();
+	// 	assertTrue(textExists("Facility Dashboard"));
+	// }
+   
 }
