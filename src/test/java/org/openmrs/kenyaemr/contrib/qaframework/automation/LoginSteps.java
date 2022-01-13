@@ -17,8 +17,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
 import org.openmrs.kenyaemr.contrib.qaframework.RunTest;
+//import org.openmrs.kenyaemr.contrib.qaframework.automation.page.FacilityDashboardPage;
 import org.openmrs.kenyaemr.contrib.qaframework.automation.page.HomePage;
 import org.openmrs.kenyaemr.contrib.qaframework.automation.page.LoginPage;
 import org.openmrs.kenyaemr.contrib.qaframework.automation.test.TestBase;
@@ -26,9 +26,8 @@ import org.openmrs.kenyaemr.contrib.qaframework.automation.test.TestBase;
 public class LoginSteps extends TestBase {
 	
 	private LoginPage loginPage;
-	
-	private HomePage homePage;
-	
+	//private FacilityDashboardPage facilityDashboardPage;
+
 	@After(RunTest.HOOK.LOGIN)
 	public void destroy() {
 		quit();
@@ -62,16 +61,11 @@ public class LoginSteps extends TestBase {
 	
 	@Then("System Evaluates Login {string}")
 	public void evaluateLogin(String status) {
-		homePage = new HomePage(loginPage);
+		new HomePage(loginPage);
 		if (status.trim().endsWith("true")) {
 			assertTrue(textExists("Log Out"));
 		} else if (status.trim().endsWith("false")) {
 			assertTrue(textExists("Home"));
 		}
-	}
-	
-	@Then("User goes to HomePage")
-	public void goToHomePage ( ) throws Exception {
-		loginPage.clickOnHomeIcon();
-	}
+	}	 
 }

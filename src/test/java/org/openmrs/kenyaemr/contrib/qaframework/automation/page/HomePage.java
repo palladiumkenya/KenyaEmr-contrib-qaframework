@@ -28,7 +28,7 @@ public class HomePage extends Page {
 	
 	private static final By SAVE_BUTTON = By.id("save-button");
 	
-	private final By HOME_PAGE = By.cssSelector("body > div.ke-toolbar > div.ke-apptoolbar > div > a");
+	private static final By CLINICIAN_HOMEPAGE = By.cssSelector("body > div.ke-page-container > div.ke-page-content > div:nth-child(5) > button > img");
 	
 	private final String PATH_HOME = "/openmrs/index.htm";
 	
@@ -36,9 +36,9 @@ public class HomePage extends Page {
 		super(page);
 	}
 	
-	public HomePage clickOnHomeIcon() {
-		clickOn(HOME_PAGE);
-		return new HomePage(this);
+	public ClinicianHomePage clickOnClinicianHomePage(){
+		clickOn(CLINICIAN_HOMEPAGE );
+		return new ClinicianHomePage(this);
 	}
 	
 	@Override
