@@ -67,13 +67,5 @@ public class LoginSteps extends TestBase {
 		} else if (status.trim().endsWith("false")) {
 			assertTrue(textExists("Home"));
 		}
-	}
-	
-	// @Then("User goes to facility dashboard page")
-	// public void goToFacilityDashboardPage () throws Exception {
-	//     facilityDashboardPage = loginPage.goToFacilityDashboardPage();
-	// 	facilityDashboardPage.waitForPageToLoad();
-	// 	assertTrue(textExists("Facility Dashboard"));
-	// }
-   
+	}	 
 }
