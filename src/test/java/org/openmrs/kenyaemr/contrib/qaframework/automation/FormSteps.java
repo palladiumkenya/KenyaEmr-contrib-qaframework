@@ -30,6 +30,9 @@ public class FormSteps extends TestBase {
 
     private EnterFormsPage enterFormsPage;
 
+    public static final  String number = "1111";
+    public static final String Appointment = "14-Jan-2022";
+
     @After(RunTest.HOOK.FORM)
     public void destroy() {
         quit();
@@ -77,37 +80,19 @@ public class FormSteps extends TestBase {
         clinicalViewPatientPage = clinicianHomePage.clickOnFirstPatient();
     }
 
-    @And("system loads clinicalView patient page")
-    public void loadClinicalViewPatientPage(){
-        // use assertion instead of waiting for page
-        clinicalViewPatientPage.waitForPage();
-    }
-
     @And("user clicks on Tb screening Form")
     public void clickOnTbScreeningForm(){
-        enterFormsPage = clinicalViewPatientPage.clickOnTbScreeningForm();
+        enterFormsPage = clinicalViewPatientPage.clickOnAntenalForm();
     }
 
-    // @Then("enter tb screening diagnosis")
-    // public void enterTbScreenDiagnosis(){
-    //     enterFormsPage.enterTbScreenDiagnosis();
-    // } 
+    @And("user fill in the antenal form")
+    public void fillInFOrm(){
+        enterFormsPage.waitForPageToLoad();
+        enterFormsPage.FillInAntenalForm(number, Appointment);
+    }
 
     @Then("user click on enter button")
     public void clickOnEnterButton(){
       clinicalViewPatientPage =  enterFormsPage.clickOnEnterButton();
-    }
-
-    // @And("user clicks on completed visit form")
-    // public void clickOnCompletedVisitForms(){
-    //     clinicalViewPatientPage.clickOnCompletedVisitForms();
-    //     clinicalViewPatientPage.waitForPage();
-    // }
-    
-    // @Then("user clicks on delete form button")
-    // public void clickOnDeleteFormButton(){
-    //     clinicalViewPatientPage.clickOnDeleteButton();
-    // }
-
-    
+    }  
 }

@@ -12,10 +12,7 @@ Feature: Form management
   Then user click on clinician home page
   And the system loads clinician home page
   Then user clicks on first patient
-  And system loads clinicalView patient page
   And user clicks on Tb screening Form
- # Then enter tb screening diagnosis
+  And user fill in the antenal form
   Then user click on enter button
-  # And user clicks on completed visit form
-  # Then user clicks on delete form button
 
