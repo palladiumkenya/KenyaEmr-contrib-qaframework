@@ -14,7 +14,6 @@ public class EnterFormsPage  extends Page {
     public static  final By REGISTER_NUMBER = By.id("w10");
     public static final By APPOINTMENT_DATES = By.xpath("/html/body/div[5]/div[1]/div/form/div/div[3]/div/div[2]/table/tbody/tr[5]/td/table/tbody/tr[7]/td/fieldset/table[1]/tbody/tr/td/span[1]/input[1]");
 
- 
     public EnterFormsPage(Page parent) {
         super(parent);
     }
@@ -37,11 +36,8 @@ public class EnterFormsPage  extends Page {
           setTextToFieldNoEnter(APPOINTMENT_DATES, Appointment);
     }
     
-
     @Override
     public String getPageUrl() {
-  
         return URL_PATH;
     }
-
 }

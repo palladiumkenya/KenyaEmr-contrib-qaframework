@@ -17,7 +17,8 @@ public class clinicalViewPatientPage  extends Page {
     public clinicalViewPatientPage(Page parent) {
         super(parent);
     }
-
+    
+    // Add all the entries on this form
     public EnterFormsPage clickOnAntenalForm(){
         clickOn(ANTENAL_VISIT);
         return new EnterFormsPage(this);

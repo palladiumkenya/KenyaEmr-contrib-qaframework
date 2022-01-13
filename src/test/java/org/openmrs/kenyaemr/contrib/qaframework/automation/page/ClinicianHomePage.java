@@ -16,9 +16,9 @@ public class ClinicianHomePage extends Page {
         clickOn(FIRST_PATIENT);
         return new clinicalViewPatientPage(this);
     }
+    
     @Override
     public String getPageUrl() {
         return URL_PATH;
     }
-
 }

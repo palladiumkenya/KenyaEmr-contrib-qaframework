@@ -3,7 +3,6 @@ Feature: Form management
   Background:
     Given user logs into kenyaemr system and goes to the Home page
 
-
   @form
   Scenario Outline: Form management
   And system loads facility dashboard page
