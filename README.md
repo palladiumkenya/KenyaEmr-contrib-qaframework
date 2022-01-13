@@ -36,3 +36,4 @@ This is the Kenya EMR  Automated Testing Framework that integrates both BDD with
 |:------------------: |:-------------: |
 | Login               | @login         | 
 | password            | @password      |
+| Form                | @form          |
